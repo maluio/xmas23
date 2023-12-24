@@ -33,8 +33,24 @@
 
 </head>
 
-<body>
-  <div class="container-lg px-3 my-5 markdown-body" style="text-align: center">
+<body style="text-align: center">
+  <script>
+    function checkAnswer() {
+      var answer = document.getElementById('answer').value;
+      if (answer === 'Enderman') {
+        document.getElementById('solved').style.display = 'block';
+      }
+    }
+  </script>
+
+  <div id="puzzle">
+    In den Pixelreichen, wo Schatten sich wiegen,</br>
+Durchstreif' ich Tag und Nacht, in Dimensionen fliegen.</br>
+Teleportier mich leise, eine Gestalt so groß,</br>
+Rate meinen Namen, in diesem Blockbau-Chaos.</br>
+    <input id="answer" type="text"> <button onclick="checkAnswer()">-></button></div>
+  </div>
+  <div id="solved" style="display: none;">
     <h3 id="mission-accomplished-agent-teo">Mission accomplished, Agent Teo!</h3>
     <h1>🕵️‍♂️</h1>
 
